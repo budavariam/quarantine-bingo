@@ -1,0 +1,10 @@
+.bingo {
+    border-collapse: collapse;
+}
+
+.bingo td {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid black;
+}
