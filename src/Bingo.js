@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./Bingo.css"
+import { Cell } from "./Cell"
 
 export const Bingo = ({ phrases }) => {
     const lineLength = Math.sqrt(phrases.length)
@@ -17,7 +18,7 @@ export const Bingo = ({ phrases }) => {
             {lines.map(line => (
                 <tr>
                     {line.map(text => (
-                        <td>{text}</td>
+                        <td><Cell text={text} /></td>
                     ))}
                 </tr>
             ))}
