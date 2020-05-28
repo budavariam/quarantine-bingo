@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useReducer } from "react"
 import PropTypes from "prop-types"
 import "./Bingo.css"
 import { Cell } from "./Cell"
@@ -13,15 +13,41 @@ export const Bingo = ({ phrases }) => {
         acc[currentLine].push(curr)
         return acc
     }, [])
+
+    const [crossedState, crossDispatch] = useReducer((state, action) => {
+        const newCrossMatrix = {...state.crossMatrix}
+        newCrossMatrix[action] = true
+        console.log(state, action, newCrossMatrix)
+        return {
+            ...state,
+            crossMatrix: newCrossMatrix,
+        }
+    }, {
+        crossMatrix: {},
+        bingoCount: 0,
+    })
+
     return (
         <table className="bingo">
-            {lines.map(line => (
-                <tr>
-                    {line.map(text => (
-                        <td><Cell text={text} /></td>
-                    ))}
-                </tr>
-            ))}
+            <tbody>
+                {lines.map((line, rowNum) => (
+                    <tr key={rowNum}>
+                        {line.map((text, colNum) => {
+                            const cellIndex = `${rowNum}-${colNum}`
+                            console.log(cellIndex, crossedState.crossMatrix, crossedState.crossMatrix[cellIndex])
+                            return (
+                                <td key={`${colNum}-${text}`}>
+                                    <Cell
+                                        text={text}
+                                        index={cellIndex}
+                                        crossed={crossedState.crossMatrix[cellIndex]}
+                                        crossDispatch={crossDispatch}
+                                    />
+                                </td>)
+                        })}
+                    </tr>
+                ))}
+            </tbody>
         </table>
     )
 }
