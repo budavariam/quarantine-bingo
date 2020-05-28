@@ -49,7 +49,7 @@ export const phrases = [
     "Did not let me in a shop because of my age",
     //  News
     "Listened to the official source of quarantine related information",
-    "Started o listen to a new podcast",
+    "Started to listen to a new podcast",
     "Installed a tracker app",
     //  Hobbies
     "Watched a whole new series while I was at home",
@@ -78,7 +78,7 @@ export const phrases = [
     "Rewatched a favourite TV series",
     "Bought an instrument",
     "Started a journal",
-    "Planned your week ahead",
+    "Planned the week ahead",
     //  Emotions
     "Spent a day without seeing the sunlight",
     "Spent a week without seeing the sunlight",
