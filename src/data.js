@@ -22,7 +22,7 @@ export const phrases = [
     "I always went to my workplace as I usually do",
     "Worked remotely even though my company did not support this before",
     "My salary was decreased",
-    "Got an aid",
+    "Got financial aid",
     "Petted a dog in a video meeting",
     "I started my own business",
     "I went to an online conference",
