@@ -1,3 +1,3 @@
 # Quarantine bingo
 
-Bingo just for fun.
+[Bingo](https://quarantine-bingo.herokuapp.com/) just for fun.
