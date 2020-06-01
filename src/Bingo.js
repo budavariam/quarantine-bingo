@@ -21,10 +21,7 @@ export const Bingo = ({ phrases }) => {
             crossMatrix: phrases.reduce((acc, text, i) => {
                 const currentLine = Math.trunc(i / lineLength)
                 const cell = { text, checked: false }
-                if (i % lineLength === 0) {
-                    return acc.length ? [...acc, [cell]] : [[cell]]
-                }
-                acc[currentLine].push(cell)
+                acc[currentLine] = [...(acc[currentLine] || []), cell]
                 return acc
             }, [])
         }
