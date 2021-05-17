@@ -1,3 +1,4 @@
 # Quarantine bingo
 
-[Bingo](https://quarantine-bingo.herokuapp.com/) just for fun.
+[Bingo](https://budavariam.github.io/quarantine-bingo) just for fun.
+
